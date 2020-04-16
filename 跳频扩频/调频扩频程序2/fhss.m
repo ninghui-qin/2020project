@@ -28,7 +28,7 @@ b=PN;
 z=zeros(N,101);
 %ÐÅÏ¢ÂëÔª
 figure,subplot(2,1,1)
-for i=1:8,
+for i=1:8
     if(b(i)==0)
         m=zeros(1,101);
         t=i-1:0.01:i;
