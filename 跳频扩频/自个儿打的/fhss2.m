@@ -1,37 +1,36 @@
 close all
 clear
-SNR_arry = 0:3:18; 
-erro_arryl = zeros(1,7);
-for times = 1:10 
-    erro_arry = ones(1,7);
-    number1 = 1;
-    for SNR = 0:3:18
-% Generation of bit pattern 
-sigl = round(rand(l,63)); 
-sig2 = round(rand(1,63)); 
-sig3 = round(rand(1,63));
-sig4 = round(rand(lz,63)); 
-signail =[];
+SNR_arry=0:3:18;
+erro_arry1=zeros(1,7);
+for times=1:10
+    erro_arry=ones(1,7);
+    number1=1;
+    for SNR=0:3:18
+sig1=round(rand(l,63));
+sig2=round(rand(1,63));
+sig3=round(rand(1,63));
+sig4=round(rand(l,63));
+signal1 =[];
 signal2 =[];
 signal3 =[]; 
 signal4 =[];
 for k = 1:63
-    if sigl(l,k) == 0
-        sig =-ones(1,120); 
+    if sig1(l,k) == 0
+        sig=-ones(1,120); 
     else
-        sig =ones(1,120);
+        sig=ones(1,120);
 end
-signal1 = [signal1 sig]; 
+signal1=[signal1 sig]; 
 end
 subplot(4,1,1);
 plot(signal1);
 axis([-100 3100  -1.5 1.5]);
 title('\bf\it 发送信号');
 for k= 1:63
-    if sig2(lzk) == 0
-        sig =-ones(1,120);
+    if sig2(l,k) == 0
+        sig=-ones(1,120);
     else
-        sig = ones(1,120);
+        sig=ones(1,120);
     end
     signal2 = [signal2 sig];
 end
@@ -228,3 +227,120 @@ title('\bf\it 扩频调制信号');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %进入信道 加上多用户干扰
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+flag2=fh_seq1-feq_seq2;
+flag3=fh_seq1-feq_seq3;
+flag4=fh_seq1-feq_seq4;
+dis_sig2=[];
+dis_sig3=[];
+dis_sig4=[];
+for k=1:63
+    if flag2(k)==0
+        flag2(k)==1;
+    else
+        flag2(k)==0;
+    end
+end
+for k=1:63
+    if flag3(k)==0
+        flag3(k)==1;
+    else
+        flag3(k)==0;
+    end
+end
+for k=1:63
+    if flag4(k)==0
+        flag4(k)==1;
+    else
+        flag4(k)==0;
+    end
+end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%对扩频信号分散点化
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+for k=1:63
+    if flag2(1,k)==0
+        sig=zeros(1,120);
+    else
+        sig=ones(1,120);
+    end
+    dis_sig2=[dis_sig2 sig];
+end
+for k=1:63
+    if flag3(1,k)==0
+        sig=zeros(1,120);
+    else
+        sig=ones(1,120);
+    end
+    dis_sig3=[dis_sig3 sig];
+end
+for k=1:63
+    if flag4(1,k)==0
+        sig=zeros(1,120);
+    else
+        sig=ones(1,120);
+    end
+    dis_sig4=[dis_sig4 sig];
+end
+dis_signal2=dis_sig2.*freq_hopped_sig2;
+dis_signal3=dis_sig3.*freq_hopped_sig3;
+dis_signal4=dis_sig4.*freq_hopped_sig4;
+A_dis_signal2=dis_sig2.*signal2;
+A_dis_signal3=dis_sig3.*signal3;
+A_dis_signal4=dis_sig4.*signal4;
+A_all_dia_signal=A_dis_signal2+A_dis_signal3+A_dis_signal4;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%接受到多用户干扰和高斯噪声的信号
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mix_sig=freq_hopped_sig2+dis_signal2+dis_signal3+dis_signal4;
+%%%%%%%%%%%%%%%%%%%%%%%%
+%加高斯白噪声
+%%%%%%%%%%%%%%%%%%%%
+awgn_signal=awgn(mix_sig,SNR,1/2);
+subplot(4,1,3)
+plot(awgn_signal);
+axis([-100 3100 -1.5-1.5]);
+title('\bf\it\加入多径干燥和白噪声的信号');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%解调，相干解调
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+de_spread_signal=spread_signal1;
+
+recieve_signal=awgn_signal.*de_spread_signal;
+A_high_fs=A_all_dis_signal+signal1;
+Sout=1/2*A(t)+1/2*cos2t+n(t)*cost
+hf_signal=1/2*A_high_fs.*(spread_signail1.^2-help_despread_signal1.*2);
+signal_out=recieve_signal-hf_signal;
+%%%%%%%%%%%%%%%%%%
+%抽样判决
+%%%%%%%%%%%%%%%%
+sentenced_signal=ones(1,63);
+for k=1:63
+    m=120*n-60;
+    if signal_out(m)<0
+        sentenced_signal(n)=0;
+    end
+end
+sentenced_signal_wave=[];
+for k=1:63
+    if sentenced_signal(1,k)==0
+        sig=-ones(1,120);
+    else
+        sig=ones(1,120);
+    end
+    sentenced.signal.wave=[sentenced_signal_wave sig];
+end
+subplot(4,1,4)
+plot(sentenced_signal_wave);
+axis([-100 3100 -1.5 1.5]);
+title('\bf\it判决恢复后信号');
+[Num,Ratio]=biterr(sentenced_signal,sigl);	%输出的信噪比和误码率
+erro_arry(number1)=Ratio;
+numberl=number1+1;
+    end
+erro_arry1=erro_arry1+erro_arry;
+end
+erro_arry1=erro_arry1/10;
+figure;	%输出信噪比误码率图形
+plot(SNR_arry,erro_arry1);
+title('误码率');
+xlabel('信噪比'),ylabel('误码率');
