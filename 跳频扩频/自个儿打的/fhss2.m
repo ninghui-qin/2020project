@@ -19,7 +19,7 @@ for k = 1:63
         sig=-ones(1,120); 
     else
         sig=ones(1,120);
-end
+    end
 signal1=[signal1 sig]; 
 end
 subplot(4,1,1);
@@ -307,7 +307,7 @@ de_spread_signal=spread_signal1;
 
 recieve_signal=awgn_signal.*de_spread_signal;
 A_high_fs=A_all_dis_signal+signal1;
-Sout=1/2*A(t)+1/2*cos2t+n(t)*cost
+Sout=1/2*A(t)+1/2*cos2t+n(t)*cost;
 hf_signal=1/2*A_high_fs.*(spread_signail1.^2-help_despread_signal1.*2);
 signal_out=recieve_signal-hf_signal;
 %%%%%%%%%%%%%%%%%%

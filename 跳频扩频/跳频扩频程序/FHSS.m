@@ -23,27 +23,27 @@ nfft=fs+1;
 Y = fft(SignalFSK,nfft);
 PSignalFSK = Y.* conj(Y)/nfft;
 f = fs*(0:nfft/2)/nfft; 
-%figure(2); 
-%plot(f,PSignalFSK(1:nfft/2+1));
-%title('FSK调制后的频谱');
-%xlabel('frequency (Hz)');
-%axis([0 100 -inf inf]);
+figure(2); 
+plot(f,PSignalFSK(1:nfft/2+1));
+title('FSK调制后的频谱');
+xlabel('frequency (Hz)');
+axis([0 100 -inf inf]);
 %---------FSK调制后，低通滤波---------------
 cof_low=fir1(64,25/fs); 
 SignalFSK_l=filter(cof_low,1,SignalFSK);
-%figure(3); 
-%plot(time,SignalFSK_l); 
-%title('FSK调制后经过低通滤波的波形');
-%xlabel('time (seconds)');
-%axis([0 2 -2 2]);
+figure(3); 
+plot(time,SignalFSK_l); 
+title('FSK调制后经过低通滤波的波形');
+xlabel('time (seconds)');
+axis([0 2 -2 2]);
 YSignalFSK_l = fft(SignalFSK_l,nfft);
 PSignalFSK_l = YSignalFSK_l.* conj(YSignalFSK_l)/nfft;
 f = fs*(0:nfft/2)/nfft;
-%figure(4);
-%plot(f,PSignalFSK_l(1:nfft/2+1));
-%title('FSK调制后经过低通滤波的频谱');
-%xlabel('frequency (Hz)');
-%axis([0 100 -inf inf]);
+figure(4);
+plot(f,PSignalFSK_l(1:nfft/2+1));
+title('FSK调制后经过低通滤波的频谱');
+xlabel('frequency (Hz)');
+axis([0 100 -inf inf]);
 %---------混频-------------- 
 i=1;
 while(i<MAXCLOCK)
@@ -52,19 +52,19 @@ while(i<MAXCLOCK)
     Tc=1/fc; %频点
     [Carrier,time] = gensig('sin',Tc,EndTime,Ts); %产生扩频载波
     MixSignal=SignalFSK_l.*Carrier;
-    %figure(6);
-    %plot(time,MixSignal);
-    %title('混频后的波形');
-    %xlabel('time (seconds)');
-    %axis([0 2 -2 2]); 
+    figure(6);
+    plot(time,MixSignal);
+    title('混频后的波形');
+    xlabel('time (seconds)');
+    axis([0 2 -2 2]); 
     %---------带通滤波--------
     cof_band=fir1(64,[fc-12.5,fc+12.5]/fs);
     yMixSignal=filter(cof_band,1,MixSignal);
-    %figure(7);
-    %plot(time,yMixSignal);
-    %title('经过带通滤波的混频信号');
-    %xlabel('time (seconds)');
-    %axis([0 2 -2 2]);
+    figure(7);
+    plot(time,yMixSignal);
+    title('经过带通滤波的混频信号');
+    xlabel('time (seconds)');
+    axis([0 2 -2 2]);
     YMixSignal = fft(yMixSignal,nfft);
     PMixSignal = YMixSignal.* conj(YMixSignal)/nfft;
     f = fs*(0:nfft/2)/nfft;
@@ -83,28 +83,28 @@ while(i<MAXCLOCK)
     [Carrier,time]=gensig('sin',Tc,EndTime,Ts); %产生扩频载波
     Sign_rec=Sign_send;
     ySign_rec=Sign_rec.*Carrier;
-    %figure(9); 
-    %plot(time,ySign_rec);
-    %title('解扩后的信号');
-    %xlabel('time (seconds)');
-    %axis([0 2 -1 1]);
+    figure(9); 
+    plot(time,ySign_rec);
+    title('解扩后的信号');
+    xlabel('time (seconds)');
+    axis([0 2 -1 1]);
     %----------低通滤波,取下边频------------
     yrr=ySign_rec;
     cof_low=fir1(64,25/fs);
     Sign_rec_l=filter(cof_low,1,ySign_rec);
-    %figure(10);
-    %plot(time,Sign_rec_l);
-    %title('解扩后的下边频的信号');
-    %xlabel('time (seconds)');
-    %axis([0 2 -1 1]);
+    figure(10);
+    plot(time,Sign_rec_l);
+    title('解扩后的下边频的信号');
+    xlabel('time (seconds)');
+    axis([0 2 -1 1]);
     YSign_rec_l = fft(Sign_rec_l,nfft);
     PSign_rec_l = YSign_rec_l.* conj(YSign_rec_l)/nfft;
     f = fs*(0:nfft/2)/nfft;
-    %figure(11);
-    %plot(f,PSign_rec_l(1:nfft/2+1));
-    %title('解扩后的下边频频谱');
-    %xlabel('frequency (Hz)');
-    %axis([0 100 -inf inf]);
+    figure(11);
+    plot(f,PSign_rec_l(1:nfft/2+1));
+    title('解扩后的下边频频谱');
+    xlabel('frequency (Hz)');
+    axis([0 100 -inf inf]);
     %----------FSK译码--------------
     cof_f0=fir1(64,[f0-0.25,f0+0.25]/fs);
     cof_f1=fir1(64,[f1-0.25,f1+0.25]/fs);
@@ -113,11 +113,11 @@ while(i<MAXCLOCK)
     rDeFSK0=DeFSK0.*u0;
     rDeFSK1=DeFSK1.*u1;
     rDeFSK=rDeFSK0-rDeFSK1;
-    %figure(12);
-    %plot(time,rDeFSK);
-    %title('采样判决前的信号');
-    %xlabel('time (seconds)');
-    %axis([0 2 -2 2]);
+    figure(12);
+    plot(time,rDeFSK);
+    title('采样判决前的信号');
+    xlabel('time (seconds)');
+    axis([0 2 -2 2]);
     %-----------采样判决---------------
     Sampletime=0.25/Ts;
     Message=[];
