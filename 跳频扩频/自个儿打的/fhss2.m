@@ -15,7 +15,7 @@ signal2 =[];
 signal3 =[]; 
 signal4 =[];
 for k = 1:63
-    if sig1(l,k) == 0
+    if sig1(1,k) == 0
         sig=-ones(1,120); 
     else
         sig=ones(1,120);
@@ -27,7 +27,7 @@ plot(signal1);
 axis([-100 3100  -1.5 1.5]);
 title('\bf\it ·¢ËÍÐÅºÅ');
 for k= 1:63
-    if sig2(l,k) == 0
+    if sig2(1,k) == 0
         sig=-ones(1,120);
     else
         sig=ones(1,120);
@@ -35,7 +35,7 @@ for k= 1:63
     signal2 = [signal2 sig];
 end
 for k = 1:63
-    if sig3(l,k)==0
+    if sig3(1,k)==0
         sig=-ones(1,120);
     else
         sig =ones(l,120);
@@ -43,7 +43,7 @@ for k = 1:63
     signal3 =[signal3 sig];
 end
 for k= 1:63
-    if sig4(l,k)==0
+    if sig4(1,k)==0
         sig=-ones(1,120);
     else
         sig=ones(1,120);
