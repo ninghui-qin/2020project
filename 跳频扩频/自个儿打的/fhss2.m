@@ -51,7 +51,7 @@ for k= 1:63
     signal4=[signal4 sig];
 end
 %preparation of 8 new carrier frequencies
-tl=[0:2*pi/119:2*pi];
+t1=[0:2*pi/119:2*pi];
 t2=[0:4*pi/119:4*pi];
 t3=[0:6*pi/119:6*pi];
 t4=[0:8*pi/119:8*pi];
@@ -333,9 +333,9 @@ subplot(4,1,4)
 plot(sentenced_signal_wave);
 axis([-100 3100 -1.5 1.5]);
 title('\bf\it判决恢复后信号');
-[Num,Ratio]=biterr(sentenced_signal,sigl);	%输出的信噪比和误码率
+[Num,Ratio]=biterr(sentenced_signal,sig1);	%输出的信噪比和误码率
 erro_arry(number1)=Ratio;
-numberl=number1+1;
+number1=number1+1;
     end
 erro_arry1=erro_arry1+erro_arry;
 end
