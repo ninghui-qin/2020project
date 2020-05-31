@@ -1,0 +1,4878 @@
+Model {
+  Name			  "anti_interference"
+  Version		  7.2
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.13"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "GBK"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  Created		  "Sat Jun 13 20:41:41 2009"
+  Creator		  "Administrator"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jun 15 22:52:37 2009"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.5.1"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.5.1"
+	  StartTime		  "0.0"
+	  StopTime		  "0.02"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.5.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.5.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    4
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.5.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.5.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.5.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.5.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.5.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.5.1"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.5.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.5.1"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 280, 135, 1160, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      ComplexToMagnitudeAngle
+      Output		      "Magnitude and angle"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ComplexToRealImag
+      Output		      "Real and imag"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      FrameConversion
+      InheritSamplingMode     off
+      OutFrame		      "Frame-based"
+    }
+    Block {
+      BlockType		      FromFile
+      FileName		      "untitled.mat"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "fixdt(1,16,0)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      MagnitudeAngleToComplex
+      Input		      "Magnitude and angle"
+      ConstantPart	      "0"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToFile
+      Filename		      "untitled.mat"
+      MatrixName	      "ans"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      SampleTime	      "1"
+    }
+  }
+  System {
+    Name		    "anti_interference"
+    Location		    [2, 78, 1022, 713]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      FromFile
+      Name		      "From File"
+      Position		      [145, 163, 210, 187]
+      FileName		      "channel_out.mat"
+      SampleTime	      "1/5.1e6"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Spectrum\nScope"
+      Ports		      [1]
+      Position		      [570, 31, 615, 99]
+      DialogController	      "dspdialog.SpectrumScope"
+      DialogControllerArgs    "DataTag0"
+      SourceBlock	      "dspsnks4/Spectrum\nScope"
+      SourceType	      "Spectrum Scope"
+      ShowPortLabels	      "none"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ScopeProperties	      on
+      Domain		      "Frequency"
+      HorizSpan		      "1"
+      UseBuffer		      on
+      BufferSize	      "2048"
+      Overlap		      "64"
+      inpFftLenInherit	      off
+      FFTlength		      "128"
+      numAvg		      "2"
+      DisplayProperties	      off
+      AxisGrid		      on
+      Memory		      off
+      FrameNumber	      on
+      AxisLegend	      off
+      AxisZoom		      off
+      OpenScopeAtSimStart     on
+      OpenScopeImmediately    off
+      FigPos		      "get(0,'defaultfigureposition')"
+      AxisProperties	      off
+      XUnits		      "Hertz"
+      XRange		      "[0...Fs/2]"
+      XDisplay		      "0"
+      InheritXIncr	      on
+      XIncr		      "1.0"
+      XLabel		      "Samples"
+      XLimit		      "Auto"
+      YUnits		      "dB"
+      XMax		      "1"
+      XMin		      "0"
+      YMin		      "-21.2867739282485"
+      YMax		      "15.4884772920994"
+      YLabel		      "Magnitude-squared, dB"
+      LineProperties	      off
+      wintypeSpecScope	      "Hann"
+      RsSpecScope	      "50"
+      betaSpecScope	      "5"
+      winsampSpecScope	      "Periodic"
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File"
+      Position		      [560, 260, 620, 290]
+      Filename		      "anti_interference_out.mat"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "anti-interference"
+      Ports		      [1, 1]
+      Position		      [340, 127, 455, 223]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"anti-interference"
+	Location		[0, 82, 1012, 743]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [170, 63, 200, 77]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [4, 1]
+	  Position		  [645, 230, 680, 365]
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [5]
+	  Position		  [725, 56, 775, 164]
+	  Floating		  off
+	  Location		  [5, 52, 1029, 737]
+	  Open			  off
+	  NumInputPorts		  "5"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	    axes4		    "%<SignalLabel>"
+	    axes5		    "%<SignalLabel>"
+	  }
+	  YMin			  "-5~-5~-5~-5~-5"
+	  YMax			  "5~5~5~5~5"
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "firstroad"
+	  Ports			  [1, 1]
+	  Position		  [420, 28, 475, 112]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "firstroad"
+	    Location		    [9, 91, 1021, 752]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [25, 48, 55, 62]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      ComplexToMagnitudeAngle
+	      Name		      "Complex to\nMagnitude-Angle"
+	      Ports		      [1, 2]
+	      Position		      [145, 26, 175, 79]
+	      Output		      "Magnitude and angle"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "fft trans"
+	      Ports		      [1, 1]
+	      Position		      [90, 25, 130, 85]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"fft trans"
+		Location		[182, 120, 970, 613]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 103, 55, 117]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer"
+		  Ports			  [1, 1]
+		  Position		  [100, 85, 150, 135]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "FFT1"
+		  Ports			  [1, 1]
+		  Position		  [315, 93, 355, 127]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag1"
+		  SourceBlock		  "dspxfrm3/FFT"
+		  SourceType		  "FFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  additionalParams	  off
+		  SkipNorm		  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Window\nFunction"
+		  Ports			  [1, 1]
+		  Position		  [210, 87, 280, 133]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag2"
+		  SourceBlock		  "dspsigops/Window\nFunction"
+		  SourceType		  "Window Function"
+		  winmode		  "Apply window to input"
+		  wintype		  "Chebyshev"
+		  sampmode		  "Continuous"
+		  samptime		  "1"
+		  N			  "64"
+		  Rs			  "80"
+		  beta			  "10"
+		  winsamp		  "Symmetric"
+		  UserWindow		  "hamming"
+		  OptParams		  off
+		  UserParams		  "{'symmetric'}"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  dataType		  "double"
+		  isSigned		  on
+		  wordLen		  "16"
+		  udDataType		  "sfix(16)"
+		  fracBitsMode		  "Best precision"
+		  numFracBits		  "15"
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "16"
+		  prodOutputFracLength	  "15"
+		  outputMode		  "Same as product output"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		  numSidelobes		  "4"
+		  sidelobeLevel		  "-30"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [440, 95, 455, 125]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Buffer"
+		  SrcPort		  1
+		  DstBlock		  "Window\nFunction"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FFT1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Window\nFunction"
+		  SrcPort		  1
+		  DstBlock		  "FFT1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inteference_delieve"
+	      Ports		      [2, 1]
+	      Position		      [390, 65, 430, 125]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inteference_delieve"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [15, 48, 45, 62]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [35, 148, 65, 162]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer1"
+		  Ports			  [1, 1]
+		  Position		  [310, 125, 345, 175]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [195, 215, 240, 255]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion2"
+		  Ports			  [1, 1]
+		  Position		  [65, 35, 110, 75]
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [205, 80, 235, 110]
+		  Gain			  "0"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Subtract"
+		  Ports			  [2, 1]
+		  Position		  [205, 132, 235, 163]
+		  Inputs		  "+-"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch"
+		  Position		  [255, 119, 290, 181]
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer1"
+		  Ports			  [1, 1]
+		  Position		  [130, 31, 180, 79]
+		  ShowName		  off
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [120, 228, 150, 242]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Unbuffer1"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 85]
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 45; 45, 0; 0, -15]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		  }
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, -60]
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Subtract"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Switch"
+		  SrcPort		  1
+		  DstBlock		  "Buffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion2"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 85]
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Annotation {
+		  Name			  "Unbuffer"
+		  Position		  [157, 88]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inverse_convertion"
+	      Ports		      [2, 1]
+	      Position		      [225, 245, 265, 305]
+	      Orientation	      "left"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inverse_convertion"
+		Location		[0, 82, 1012, 743]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [435, 43, 465, 57]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [575, 103, 605, 117]
+		  Orientation		  "left"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer2"
+		  Ports			  [1, 1]
+		  Position		  [185, 26, 215, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  ComplexToRealImag
+		  Name			  "Complex to\nReal-Imag"
+		  Ports			  [1, 1]
+		  Position		  [205, 110, 235, 140]
+		  Orientation		  "left"
+		  Output		  "Real"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [375, 105, 420, 145]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion2"
+		  Ports			  [1, 1]
+		  Position		  [345, 27, 380, 73]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion3"
+		  Ports			  [1, 1]
+		  Position		  [105, 27, 140, 73]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "IFFT1"
+		  Ports			  [1, 1]
+		  Position		  [455, 109, 495, 141]
+		  Orientation		  "left"
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag3"
+		  SourceBlock		  "dspxfrm3/IFFT"
+		  SourceType		  "IFFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  cs_in			  off
+		  SkipNorm		  on
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  mode			  "Complex"
+		  outSamplingMode	  "Sample based"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Integer Delay1"
+		  Ports			  [1, 1]
+		  Position		  [145, 108, 180, 142]
+		  Orientation		  "left"
+		  SourceBlock		  "simulink/Discrete/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  vinit			  "0.0"
+		  samptime		  "-1"
+		  NumDelays		  "6144"
+		}
+		Block {
+		  BlockType		  MagnitudeAngleToComplex
+		  Name			  "Magnitude-Angle\nto Complex"
+		  Ports			  [2, 1]
+		  Position		  [515, 97, 550, 153]
+		  Orientation		  "left"
+		  Input			  "Magnitude and angle"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer1"
+		  Ports			  [1, 1]
+		  Position		  [240, 26, 275, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer2"
+		  Ports			  [1, 1]
+		  Position		  [280, 101, 330, 149]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [25, 118, 55, 132]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion2"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer2"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Magnitude-Angle\nto Complex"
+		  SrcPort		  1
+		  DstBlock		  "IFFT1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer2"
+		  SrcPort		  1
+		  DstBlock		  "Complex to\nReal-Imag"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion3"
+		  SrcPort		  1
+		  Points		  [-30, 0; 0, 140; 495, 0]
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Complex to\nReal-Imag"
+		  SrcPort		  1
+		  DstBlock		  "Integer Delay1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IFFT1"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integer Delay1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "threshold"
+	      Ports		      [1, 1]
+	      Position		      [225, 145, 265, 205]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"threshold"
+		Location		[28, 92, 816, 585]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [135, 58, 165, 72]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add1"
+		  Ports			  [2, 1]
+		  Position		  [485, 247, 515, 278]
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [265, 105, 295, 135]
+		  Value			  "8192"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [245, 255, 275, 285]
+		  Value			  "400"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Display
+		  Name			  "Display6"
+		  Ports			  [1]
+		  Position		  [465, 293, 550, 317]
+		  Decimation		  "1"
+		  Lockdown		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  Ports			  [2, 1]
+		  Position		  [460, 82, 490, 113]
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [585, 85, 615, 115]
+		  Gain			  "0.3"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Matrix\nSum"
+		  Ports			  [1, 1]
+		  Position		  [210, 45, 275, 85]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag4"
+		  SourceBlock		  "dspobslib/Matrix\nSum"
+		  SourceType		  "Matrix Sum"
+		  Dim			  "Columns"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  outputMode		  "Same as accumulator"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  ZeroOrderHold
+		  Name			  "Zero-Order\nHold5"
+		  Position		  [330, 255, 355, 285]
+		  SampleTime		  "1/5.1e6"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [635, 258, 665, 272]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Matrix\nSum"
+		  SrcPort		  1
+		  Points		  [160, 0; 0, 25]
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [0, 55; -170, 0; 0, 100]
+		  DstBlock		  "Add1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add1"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  Branch {
+		    Points		    [0, 75; -160, 0]
+		    DstBlock		    "Display6"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Matrix\nSum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Zero-Order\nHold5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [135, 0; 0, -15]
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Zero-Order\nHold5"
+		  SrcPort		  1
+		  DstBlock		  "Add1"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [120, 268, 150, 282]
+	      Orientation	      "left"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "fft trans"
+	      SrcPort		      1
+	      DstBlock		      "Complex to\nMagnitude-Angle"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"threshold"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[140, 0; 0, 40]
+		DstBlock		"inteference_delieve"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      2
+	      Points		      [145, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "inteference_delieve"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "threshold"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -65]
+	      DstBlock		      "inteference_delieve"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "fft trans"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "inverse_convertion"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "fourthroad"
+	  Ports			  [1, 1]
+	  Position		  [420, 383, 475, 467]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "fourthroad"
+	    Location		    [2, 82, 790, 575]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [25, 48, 55, 62]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      ComplexToMagnitudeAngle
+	      Name		      "Complex to\nMagnitude-Angle"
+	      Ports		      [1, 2]
+	      Position		      [145, 26, 175, 79]
+	      Output		      "Magnitude and angle"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "all"
+	      Ports		      [1, 1]
+	      Position		      [90, 25, 130, 85]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"all"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 103, 55, 117]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer1"
+		  Ports			  [1, 1]
+		  Position		  [80, 85, 130, 135]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "FFT"
+		  Ports			  [1, 1]
+		  Position		  [330, 93, 370, 127]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag5"
+		  SourceBlock		  "dspxfrm3/FFT"
+		  SourceType		  "FFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  additionalParams	  off
+		  SkipNorm		  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Integer Delay"
+		  Ports			  [1, 1]
+		  Position		  [160, 93, 180, 127]
+		  SourceBlock		  "simulink/Discrete/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  vinit			  "0.0"
+		  samptime		  "-1"
+		  NumDelays		  "6144"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Window\nFunction1"
+		  Ports			  [1, 1]
+		  Position		  [215, 87, 285, 133]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag6"
+		  SourceBlock		  "dspsigops/Window\nFunction"
+		  SourceType		  "Window Function"
+		  winmode		  "Apply window to input"
+		  wintype		  "Chebyshev"
+		  sampmode		  "Continuous"
+		  samptime		  "1"
+		  N			  "64"
+		  Rs			  "80"
+		  beta			  "10"
+		  winsamp		  "Symmetric"
+		  UserWindow		  "hamming"
+		  OptParams		  off
+		  UserParams		  "{'symmetric'}"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  dataType		  "double"
+		  isSigned		  on
+		  wordLen		  "16"
+		  udDataType		  "sfix(16)"
+		  fracBitsMode		  "Best precision"
+		  numFracBits		  "15"
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "16"
+		  prodOutputFracLength	  "15"
+		  outputMode		  "Same as product output"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		  numSidelobes		  "4"
+		  sidelobeLevel		  "-30"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [440, 95, 455, 125]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer1"
+		  SrcPort		  1
+		  DstBlock		  "Integer Delay"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integer Delay"
+		  SrcPort		  1
+		  DstBlock		  "Window\nFunction1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Window\nFunction1"
+		  SrcPort		  1
+		  DstBlock		  "FFT"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FFT"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inteference_delieve"
+	      Ports		      [2, 1]
+	      Position		      [390, 65, 430, 125]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inteference_delieve"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 48, 55, 62]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [35, 148, 65, 162]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer1"
+		  Ports			  [1, 1]
+		  Position		  [325, 126, 355, 174]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion"
+		  Ports			  [1, 1]
+		  Position		  [90, 32, 125, 78]
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [175, 212, 210, 258]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [205, 80, 235, 110]
+		  Gain			  "0"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Subtract"
+		  Ports			  [2, 1]
+		  Position		  [205, 132, 235, 163]
+		  Inputs		  "+-"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch"
+		  Position		  [255, 119, 290, 181]
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer"
+		  Ports			  [1, 1]
+		  Position		  [150, 31, 185, 79]
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [120, 228, 150, 242]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer1"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 85]
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Switch"
+		  SrcPort		  1
+		  DstBlock		  "Buffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Subtract"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  Branch {
+		    Points		    [0, -60]
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer"
+		  SrcPort		  1
+		  Points		  [0, 85]
+		  Branch {
+		    Points		    [0, 45; 45, 0; 0, -15]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		  }
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inverse_convertion"
+	      Ports		      [2, 1]
+	      Position		      [225, 245, 265, 305]
+	      Orientation	      "left"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inverse_convertion"
+		Location		[2, 82, 790, 553]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [335, 43, 365, 57]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [575, 103, 605, 117]
+		  Orientation		  "left"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer2"
+		  Ports			  [1, 1]
+		  Position		  [160, 26, 190, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  ComplexToRealImag
+		  Name			  "Complex to\nReal-Imag"
+		  Ports			  [1, 1]
+		  Position		  [85, 110, 115, 140]
+		  Orientation		  "left"
+		  Output		  "Real"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [300, 105, 345, 145]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion2"
+		  Ports			  [1, 1]
+		  Position		  [275, 27, 310, 73]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion3"
+		  Ports			  [1, 1]
+		  Position		  [105, 27, 140, 73]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "IFFT"
+		  Ports			  [1, 1]
+		  Position		  [410, 109, 450, 141]
+		  Orientation		  "left"
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag7"
+		  SourceBlock		  "dspxfrm3/IFFT"
+		  SourceType		  "IFFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  cs_in			  off
+		  SkipNorm		  on
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  mode			  "Complex"
+		  outSamplingMode	  "Sample based"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  MagnitudeAngleToComplex
+		  Name			  "Magnitude-Angle\nto Complex"
+		  Ports			  [2, 1]
+		  Position		  [515, 97, 550, 153]
+		  Orientation		  "left"
+		  Input			  "Magnitude and angle"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer1"
+		  Ports			  [1, 1]
+		  Position		  [210, 26, 245, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer2"
+		  Ports			  [1, 1]
+		  Position		  [140, 101, 190, 149]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [25, 118, 55, 132]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Frame Conversion2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Complex to\nReal-Imag"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion3"
+		  SrcPort		  1
+		  Points		  [-30, 0; 0, 140; 495, 0]
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Unbuffer2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Complex to\nReal-Imag"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Magnitude-Angle\nto Complex"
+		  SrcPort		  1
+		  DstBlock		  "IFFT"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer2"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion2"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IFFT"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer2"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "threshold"
+	      Ports		      [1, 1]
+	      Position		      [225, 145, 265, 205]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"threshold"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 58, 55, 72]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add1"
+		  Ports			  [2, 1]
+		  Position		  [485, 247, 515, 278]
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [265, 105, 295, 135]
+		  Value			  "8192"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [245, 255, 275, 285]
+		  Value			  "400"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Display
+		  Name			  "Display6"
+		  Ports			  [1]
+		  Position		  [465, 293, 550, 317]
+		  Decimation		  "1"
+		  Lockdown		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  Ports			  [2, 1]
+		  Position		  [460, 82, 490, 113]
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [585, 85, 615, 115]
+		  Gain			  "0.3"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Matrix\nSum"
+		  Ports			  [1, 1]
+		  Position		  [210, 45, 275, 85]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag8"
+		  SourceBlock		  "dspobslib/Matrix\nSum"
+		  SourceType		  "Matrix Sum"
+		  Dim			  "Columns"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  outputMode		  "Same as accumulator"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  ZeroOrderHold
+		  Name			  "Zero-Order\nHold5"
+		  Position		  [330, 255, 355, 285]
+		  SampleTime		  "1/5.1e6"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [635, 258, 665, 272]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Zero-Order\nHold5"
+		  SrcPort		  1
+		  DstBlock		  "Add1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [135, 0; 0, -15]
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Zero-Order\nHold5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Matrix\nSum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add1"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  Branch {
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 75; -160, 0]
+		    DstBlock		    "Display6"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [0, 55; -170, 0; 0, 100]
+		  DstBlock		  "Add1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Matrix\nSum"
+		  SrcPort		  1
+		  Points		  [160, 0; 0, 25]
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [165, 253, 195, 267]
+	      Orientation	      "left"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "inverse_convertion"
+	      SrcPort		      1
+	      Points		      [0, -15]
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "all"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "threshold"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -65]
+	      DstBlock		      "inteference_delieve"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "inteference_delieve"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      2
+	      Points		      [145, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      1
+	      Points		      [0, 0; 25, 0]
+	      Branch {
+		Points			[140, 0; 0, 40]
+		DstBlock		"inteference_delieve"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"threshold"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "all"
+	      SrcPort		      1
+	      DstBlock		      "Complex to\nMagnitude-Angle"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "secondroad"
+	  Ports			  [1, 1]
+	  Position		  [420, 153, 475, 237]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "secondroad"
+	    Location		    [2, 82, 790, 575]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [25, 48, 55, 62]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      ComplexToMagnitudeAngle
+	      Name		      "Complex to\nMagnitude-Angle"
+	      Ports		      [1, 2]
+	      Position		      [145, 26, 175, 79]
+	      Output		      "Magnitude and angle"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "all"
+	      Ports		      [1, 1]
+	      Position		      [90, 25, 130, 85]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"all"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 103, 55, 117]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer1"
+		  Ports			  [1, 1]
+		  Position		  [80, 85, 130, 135]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "FFT"
+		  Ports			  [1, 1]
+		  Position		  [330, 93, 370, 127]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag9"
+		  SourceBlock		  "dspxfrm3/FFT"
+		  SourceType		  "FFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  additionalParams	  off
+		  SkipNorm		  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Integer Delay"
+		  Ports			  [1, 1]
+		  Position		  [160, 93, 180, 127]
+		  SourceBlock		  "simulink/Discrete/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  vinit			  "0.0"
+		  samptime		  "-1"
+		  NumDelays		  "2048"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Window\nFunction1"
+		  Ports			  [1, 1]
+		  Position		  [215, 87, 285, 133]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag10"
+		  SourceBlock		  "dspsigops/Window\nFunction"
+		  SourceType		  "Window Function"
+		  winmode		  "Apply window to input"
+		  wintype		  "Chebyshev"
+		  sampmode		  "Continuous"
+		  samptime		  "1"
+		  N			  "64"
+		  Rs			  "80"
+		  beta			  "10"
+		  winsamp		  "Symmetric"
+		  UserWindow		  "hamming"
+		  OptParams		  off
+		  UserParams		  "{'symmetric'}"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  dataType		  "double"
+		  isSigned		  on
+		  wordLen		  "16"
+		  udDataType		  "sfix(16)"
+		  fracBitsMode		  "Best precision"
+		  numFracBits		  "15"
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "16"
+		  prodOutputFracLength	  "15"
+		  outputMode		  "Same as product output"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		  numSidelobes		  "4"
+		  sidelobeLevel		  "-30"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [440, 95, 455, 125]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer1"
+		  SrcPort		  1
+		  DstBlock		  "Integer Delay"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integer Delay"
+		  SrcPort		  1
+		  DstBlock		  "Window\nFunction1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Window\nFunction1"
+		  SrcPort		  1
+		  DstBlock		  "FFT"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FFT"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inteference_delieve"
+	      Ports		      [2, 1]
+	      Position		      [390, 65, 430, 125]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inteference_delieve"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 48, 55, 62]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [35, 148, 65, 162]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer1"
+		  Ports			  [1, 1]
+		  Position		  [325, 126, 355, 174]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion"
+		  Ports			  [1, 1]
+		  Position		  [90, 32, 125, 78]
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [175, 212, 210, 258]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [205, 80, 235, 110]
+		  Gain			  "0"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Subtract"
+		  Ports			  [2, 1]
+		  Position		  [205, 132, 235, 163]
+		  Inputs		  "+-"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch"
+		  Position		  [255, 119, 290, 181]
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer"
+		  Ports			  [1, 1]
+		  Position		  [150, 31, 185, 79]
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [120, 228, 150, 242]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer1"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 85]
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Switch"
+		  SrcPort		  1
+		  DstBlock		  "Buffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Subtract"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  Branch {
+		    Points		    [0, -60]
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer"
+		  SrcPort		  1
+		  Points		  [0, 85]
+		  Branch {
+		    Points		    [0, 45; 45, 0; 0, -15]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		  }
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inverse_convertion"
+	      Ports		      [2, 1]
+	      Position		      [225, 245, 265, 305]
+	      Orientation	      "left"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inverse_convertion"
+		Location		[2, 82, 790, 553]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [335, 43, 365, 57]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [575, 103, 605, 117]
+		  Orientation		  "left"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer2"
+		  Ports			  [1, 1]
+		  Position		  [160, 26, 190, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  ComplexToRealImag
+		  Name			  "Complex to\nReal-Imag"
+		  Ports			  [1, 1]
+		  Position		  [180, 110, 210, 140]
+		  Orientation		  "left"
+		  Output		  "Real"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [350, 105, 395, 145]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion2"
+		  Ports			  [1, 1]
+		  Position		  [275, 27, 310, 73]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion3"
+		  Ports			  [1, 1]
+		  Position		  [105, 27, 140, 73]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "IFFT"
+		  Ports			  [1, 1]
+		  Position		  [425, 109, 465, 141]
+		  Orientation		  "left"
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag11"
+		  SourceBlock		  "dspxfrm3/IFFT"
+		  SourceType		  "IFFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  cs_in			  off
+		  SkipNorm		  on
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  mode			  "Complex"
+		  outSamplingMode	  "Sample based"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Integer Delay"
+		  Ports			  [1, 1]
+		  Position		  [120, 108, 155, 142]
+		  Orientation		  "left"
+		  SourceBlock		  "simulink/Discrete/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  vinit			  "0.0"
+		  samptime		  "-1"
+		  NumDelays		  "4096"
+		}
+		Block {
+		  BlockType		  MagnitudeAngleToComplex
+		  Name			  "Magnitude-Angle\nto Complex"
+		  Ports			  [2, 1]
+		  Position		  [515, 97, 550, 153]
+		  Orientation		  "left"
+		  Input			  "Magnitude and angle"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer1"
+		  Ports			  [1, 1]
+		  Position		  [210, 26, 245, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer2"
+		  Ports			  [1, 1]
+		  Position		  [235, 101, 285, 149]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [25, 118, 55, 132]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Frame Conversion2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Complex to\nReal-Imag"
+		  SrcPort		  1
+		  DstBlock		  "Integer Delay"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion3"
+		  SrcPort		  1
+		  Points		  [-30, 0; 0, 140; 495, 0]
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Unbuffer2"
+		  SrcPort		  1
+		  DstBlock		  "Complex to\nReal-Imag"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Magnitude-Angle\nto Complex"
+		  SrcPort		  1
+		  DstBlock		  "IFFT"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer2"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion2"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IFFT"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integer Delay"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "threshold"
+	      Ports		      [1, 1]
+	      Position		      [225, 145, 265, 205]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"threshold"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 58, 55, 72]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add1"
+		  Ports			  [2, 1]
+		  Position		  [485, 247, 515, 278]
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [265, 105, 295, 135]
+		  Value			  "8192"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [245, 255, 275, 285]
+		  Value			  "400"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Display
+		  Name			  "Display6"
+		  Ports			  [1]
+		  Position		  [465, 293, 550, 317]
+		  Decimation		  "1"
+		  Lockdown		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  Ports			  [2, 1]
+		  Position		  [460, 82, 490, 113]
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [585, 85, 615, 115]
+		  Gain			  "0.3"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Matrix\nSum"
+		  Ports			  [1, 1]
+		  Position		  [215, 45, 280, 85]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag12"
+		  SourceBlock		  "dspobslib/Matrix\nSum"
+		  SourceType		  "Matrix Sum"
+		  Dim			  "Columns"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  outputMode		  "Same as accumulator"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  ZeroOrderHold
+		  Name			  "Zero-Order\nHold5"
+		  Position		  [330, 255, 355, 285]
+		  SampleTime		  "1/5.1e6"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [635, 258, 665, 272]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Zero-Order\nHold5"
+		  SrcPort		  1
+		  DstBlock		  "Add1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [135, 0; 0, -15]
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Zero-Order\nHold5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Matrix\nSum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add1"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  Branch {
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 75; -160, 0]
+		    DstBlock		    "Display6"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [0, 55; -170, 0; 0, 100]
+		  DstBlock		  "Add1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Matrix\nSum"
+		  SrcPort		  1
+		  Points		  [155, 0; 0, 25]
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [80, 268, 110, 282]
+	      Orientation	      "left"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "inverse_convertion"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "all"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "threshold"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -65]
+	      DstBlock		      "inteference_delieve"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "inteference_delieve"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      2
+	      Points		      [145, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      1
+	      Points		      [0, 0; 25, 0]
+	      Branch {
+		Points			[140, 0; 0, 40]
+		DstBlock		"inteference_delieve"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"threshold"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "all"
+	      SrcPort		      1
+	      DstBlock		      "Complex to\nMagnitude-Angle"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "thirdroad"
+	  Ports			  [1, 1]
+	  Position		  [420, 273, 475, 357]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "thirdroad"
+	    Location		    [2, 82, 790, 575]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [25, 48, 55, 62]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      ComplexToMagnitudeAngle
+	      Name		      "Complex to\nMagnitude-Angle"
+	      Ports		      [1, 2]
+	      Position		      [145, 26, 175, 79]
+	      Output		      "Magnitude and angle"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "all"
+	      Ports		      [1, 1]
+	      Position		      [80, 25, 120, 85]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"all"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 103, 55, 117]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer1"
+		  Ports			  [1, 1]
+		  Position		  [80, 85, 130, 135]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "FFT"
+		  Ports			  [1, 1]
+		  Position		  [330, 93, 370, 127]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag13"
+		  SourceBlock		  "dspxfrm3/FFT"
+		  SourceType		  "FFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  additionalParams	  off
+		  SkipNorm		  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Integer Delay"
+		  Ports			  [1, 1]
+		  Position		  [160, 93, 180, 127]
+		  SourceBlock		  "simulink/Discrete/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  vinit			  "0.0"
+		  samptime		  "-1"
+		  NumDelays		  "4096"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Window\nFunction1"
+		  Ports			  [1, 1]
+		  Position		  [215, 87, 285, 133]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag14"
+		  SourceBlock		  "dspsigops/Window\nFunction"
+		  SourceType		  "Window Function"
+		  winmode		  "Apply window to input"
+		  wintype		  "Chebyshev"
+		  sampmode		  "Continuous"
+		  samptime		  "1"
+		  N			  "64"
+		  Rs			  "80"
+		  beta			  "10"
+		  winsamp		  "Symmetric"
+		  UserWindow		  "hamming"
+		  OptParams		  off
+		  UserParams		  "{'symmetric'}"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  dataType		  "double"
+		  isSigned		  on
+		  wordLen		  "16"
+		  udDataType		  "sfix(16)"
+		  fracBitsMode		  "Best precision"
+		  numFracBits		  "15"
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "16"
+		  prodOutputFracLength	  "15"
+		  outputMode		  "Same as product output"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		  numSidelobes		  "4"
+		  sidelobeLevel		  "-30"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [440, 95, 455, 125]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer1"
+		  SrcPort		  1
+		  DstBlock		  "Integer Delay"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integer Delay"
+		  SrcPort		  1
+		  DstBlock		  "Window\nFunction1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Window\nFunction1"
+		  SrcPort		  1
+		  DstBlock		  "FFT"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FFT"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inteference_delieve"
+	      Ports		      [2, 1]
+	      Position		      [390, 65, 430, 125]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inteference_delieve"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 48, 55, 62]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [35, 148, 65, 162]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer1"
+		  Ports			  [1, 1]
+		  Position		  [325, 126, 355, 174]
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion"
+		  Ports			  [1, 1]
+		  Position		  [90, 32, 125, 78]
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [175, 212, 210, 258]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [205, 80, 235, 110]
+		  Gain			  "0"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Subtract"
+		  Ports			  [2, 1]
+		  Position		  [205, 132, 235, 163]
+		  Inputs		  "+-"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch"
+		  Position		  [255, 119, 290, 181]
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer"
+		  Ports			  [1, 1]
+		  Position		  [150, 31, 185, 79]
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [120, 228, 150, 242]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Unbuffer"
+		  SrcPort		  1
+		  Points		  [0, 85]
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 45; 45, 0; 0, -15]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		  }
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, -60]
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Subtract"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Switch"
+		  SrcPort		  1
+		  DstBlock		  "Buffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer1"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 85]
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "inverse_convertion"
+	      Ports		      [2, 1]
+	      Position		      [225, 245, 265, 305]
+	      Orientation	      "left"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"inverse_convertion"
+		Location		[2, 82, 790, 553]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [335, 43, 365, 57]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [575, 103, 605, 117]
+		  Orientation		  "left"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Buffer2"
+		  Ports			  [1, 1]
+		  Position		  [160, 26, 190, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Buffer"
+		  SourceType		  "Buffer"
+		  N			  "8192"
+		  V			  "0"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  ComplexToRealImag
+		  Name			  "Complex to\nReal-Imag"
+		  Ports			  [1, 1]
+		  Position		  [185, 110, 215, 140]
+		  Orientation		  "left"
+		  Output		  "Real"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion1"
+		  Ports			  [1, 1]
+		  Position		  [335, 105, 380, 145]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion2"
+		  Ports			  [1, 1]
+		  Position		  [275, 27, 310, 73]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  FrameConversion
+		  Name			  "Frame Conversion3"
+		  Ports			  [1, 1]
+		  Position		  [105, 27, 140, 73]
+		  Orientation		  "left"
+		  OutFrame		  "Sample-based"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "IFFT"
+		  Ports			  [1, 1]
+		  Position		  [410, 109, 450, 141]
+		  Orientation		  "left"
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag15"
+		  SourceBlock		  "dspxfrm3/IFFT"
+		  SourceType		  "IFFT"
+		  CompMethod		  "Table lookup"
+		  TableOpt		  "NEW"
+		  TableOptActive	  "Speed"
+		  BitRevOrder		  off
+		  cs_in			  off
+		  SkipNorm		  on
+		  InheritFFTLength	  on
+		  FFTLength		  "64"
+		  mode			  "Complex"
+		  outSamplingMode	  "Sample based"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  firstCoeffMode	  "Same word length as input"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "15"
+		  outputMode		  "Inherit via internal rule"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Inherit via internal rule"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Integer Delay"
+		  Ports			  [1, 1]
+		  Position		  [120, 108, 155, 142]
+		  Orientation		  "left"
+		  SourceBlock		  "simulink/Discrete/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  vinit			  "0.0"
+		  samptime		  "-1"
+		  NumDelays		  "2048"
+		}
+		Block {
+		  BlockType		  MagnitudeAngleToComplex
+		  Name			  "Magnitude-Angle\nto Complex"
+		  Ports			  [2, 1]
+		  Position		  [515, 97, 550, 153]
+		  Orientation		  "left"
+		  Input			  "Magnitude and angle"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer1"
+		  Ports			  [1, 1]
+		  Position		  [210, 26, 245, 74]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unbuffer2"
+		  Ports			  [1, 1]
+		  Position		  [240, 101, 290, 149]
+		  Orientation		  "left"
+		  SourceBlock		  "dspbuff3/Unbuffer"
+		  SourceType		  "Unbuffer"
+		  ic			  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [25, 118, 55, 132]
+		  Orientation		  "left"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion2"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer1"
+		  SrcPort		  1
+		  DstBlock		  "Buffer2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Buffer2"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Magnitude-Angle\nto Complex"
+		  SrcPort		  1
+		  DstBlock		  "IFFT"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unbuffer2"
+		  SrcPort		  1
+		  DstBlock		  "Complex to\nReal-Imag"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion3"
+		  SrcPort		  1
+		  Points		  [-30, 0; 0, 140; 495, 0]
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Complex to\nReal-Imag"
+		  SrcPort		  1
+		  DstBlock		  "Integer Delay"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Frame Conversion2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  DstBlock		  "Magnitude-Angle\nto Complex"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IFFT"
+		  SrcPort		  1
+		  DstBlock		  "Frame Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Frame Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "Unbuffer2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integer Delay"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "threshold"
+	      Ports		      [1, 1]
+	      Position		      [225, 145, 265, 205]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"threshold"
+		Location		[2, 82, 790, 575]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [25, 58, 55, 72]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add1"
+		  Ports			  [2, 1]
+		  Position		  [485, 247, 515, 278]
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [265, 105, 295, 135]
+		  Value			  "8192"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [245, 255, 275, 285]
+		  Value			  "400"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Display
+		  Name			  "Display6"
+		  Ports			  [1]
+		  Position		  [465, 293, 550, 317]
+		  Decimation		  "1"
+		  Lockdown		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  Ports			  [2, 1]
+		  Position		  [460, 82, 490, 113]
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [585, 85, 615, 115]
+		  Gain			  "0.3"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  ParameterDataType	  "sfix(16)"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Matrix\nSum"
+		  Ports			  [1, 1]
+		  Position		  [215, 45, 280, 85]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag16"
+		  SourceBlock		  "dspobslib/Matrix\nSum"
+		  SourceType		  "Matrix Sum"
+		  Dim			  "Columns"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  outputMode		  "Same as accumulator"
+		  outputWordLength	  "16"
+		  outputFracLength	  "15"
+		  accumMode		  "Inherit via internal rule"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  ZeroOrderHold
+		  Name			  "Zero-Order\nHold5"
+		  Position		  [330, 255, 355, 285]
+		  SampleTime		  "1/5.1e6"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [635, 258, 665, 272]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Matrix\nSum"
+		  SrcPort		  1
+		  Points		  [155, 0; 0, 25]
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [0, 55; -170, 0; 0, 100]
+		  DstBlock		  "Add1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add1"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  Branch {
+		    Points		    [0, 75; -160, 0]
+		    DstBlock		    "Display6"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Matrix\nSum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Zero-Order\nHold5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [135, 0; 0, -15]
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Zero-Order\nHold5"
+		  SrcPort		  1
+		  DstBlock		  "Add1"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [165, 253, 195, 267]
+	      Orientation	      "left"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "all"
+	      SrcPort		      1
+	      DstBlock		      "Complex to\nMagnitude-Angle"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      1
+	      Points		      [0, 0; 25, 0]
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"threshold"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[140, 0; 0, 40]
+		DstBlock		"inteference_delieve"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Complex to\nMagnitude-Angle"
+	      SrcPort		      2
+	      Points		      [145, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "inteference_delieve"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 195]
+	      DstBlock		      "inverse_convertion"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "threshold"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -65]
+	      DstBlock		      "inteference_delieve"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "all"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "inverse_convertion"
+	      SrcPort		      1
+	      Points		      [0, -15]
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [740, 293, 770, 307]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "firstroad"
+	  SrcPort		  1
+	  Points		  [145, 0]
+	  Branch {
+	    Points		    [0, 175]
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "secondroad"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  Branch {
+	    Points		    [0, 85]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -105]
+	    DstBlock		    "Scope"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "thirdroad"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, -205]
+	    DstBlock		    "Scope"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "fourthroad"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  Branch {
+	    Points		    [55, 0; 0, -75]
+	    DstBlock		    "Add1"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [0, -295]
+	    DstBlock		    "Scope"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  Branch {
+	    DstBlock		    "firstroad"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 125]
+	    Branch {
+	      DstBlock		      "secondroad"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 120]
+	      Branch {
+		DstBlock		"thirdroad"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"fourthroad"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -150]
+	    DstBlock		    "Scope"
+	    DstPort		    5
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "input"
+      Ports		      [1]
+      Position		      [345, 248, 400, 332]
+      Floating		      off
+      Location		      [5, 52, 1029, 733]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "output"
+      Ports		      [1]
+      Position		      [565, 133, 620, 217]
+      Floating		      off
+      Location		      [5, 52, 1029, 737]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "From File"
+      SrcPort		      1
+      Points		      [55, 0]
+      Branch {
+	DstBlock		"anti-interference"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 115]
+	DstBlock		"input"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "anti-interference"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	DstBlock		"output"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -110]
+	DstBlock		"Spectrum\nScope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 100]
+	DstBlock		"To File"
+	DstPort			1
+      }
+    }
+  }
+}
+MatData {
+  NumRecords		  17
+  DataRecord {
+    Tag			    DataTag16
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    -     0         0    #0   $UA=')I>%-U;5!R;V0    "
+  }
+  DataRecord {
+    Tag			    DataTag15
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 249&5 "
+  }
+  DataRecord {
+    Tag			    DataTag14
+    Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
+    "     %    \"     $    &     0         0    !@   %=I;F1O=P  "
+  }
+  DataRecord {
+    Tag			    DataTag13
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    #     0         0  , 1D94  "
+  }
+  DataRecord {
+    Tag			    DataTag12
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    -     0         0    #0   $UA=')I>%-U;5!R;V0    "
+  }
+  DataRecord {
+    Tag			    DataTag11
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 249&5 "
+  }
+  DataRecord {
+    Tag			    DataTag10
+    Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
+    "     %    \"     $    &     0         0    !@   %=I;F1O=P  "
+  }
+  DataRecord {
+    Tag			    DataTag9
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    #     0         0  , 1D94  "
+  }
+  DataRecord {
+    Tag			    DataTag8
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    -     0         0    #0   $UA=')I>%-U;5!R;V0    "
+  }
+  DataRecord {
+    Tag			    DataTag7
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 249&5 "
+  }
+  DataRecord {
+    Tag			    DataTag6
+    Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
+    "     %    \"     $    &     0         0    !@   %=I;F1O=P  "
+  }
+  DataRecord {
+    Tag			    DataTag5
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    #     0         0  , 1D94  "
+  }
+  DataRecord {
+    Tag			    DataTag4
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    -     0         0    #0   $UA=')I>%-U;5!R;V0    "
+  }
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 249&5 "
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
+    "     %    \"     $    &     0         0    !@   %=I;F1O=P  "
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    #     0         0  , 1D94  "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    ,     8    (    !          %    \"                0         0          "
+  }
+}
