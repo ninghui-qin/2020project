@@ -22,10 +22,14 @@ for k = 1:63
     end
 signal1=[signal1 sig]; %生成调相初始信号
 end
-subplot(4,1,1);
+
+figure(1);
 plot(signal1);
 axis([-100 3100  -1.5 1.5]);
-title('\bf\it 发送信号');
+title(' 发送信号1');
+
+
+
 for k= 1:63
     if sig2(1,k) == 0
         sig=-ones(1,120);
@@ -50,6 +54,20 @@ for k= 1:63
     end
     signal4=[signal4 sig];
 end
+
+figure(2);
+plot(signal2);
+axis([-100 3100  -1.5 1.5]);
+title(' 发送信号2');
+figure(3);
+plot(signal3);
+axis([-100 3100  -1.5 1.5]);
+title('发送信号3');
+figure(4);
+plot(signal4);
+axis([-100 3100  -1.5 1.5]);
+title(' 发送信号4');
+
 %preparation of 8 new carrier frequencies
 t1=[0:2*pi/119:2*pi];
 t2=[0:4*pi/119:4*pi];
@@ -77,6 +95,11 @@ c8=cos(t8);
 s8=sin(t8);
 adr1=m_seq(103);
 adr1=[adr1,adr1(1),adr1(2)];
+
+figure(5);
+plot(adr1);
+axis([0 100  -0.5 1.5]);
+title('m序列');
 
 fh_seq1=[];
 fh_seq2=[];
@@ -129,6 +152,12 @@ for k=1:63
             help_despread_signal1=[help_despread_signal1 s8];
     end
 end
+
+figure(6);
+plot(spread_signal1);
+axis([-100 3100  -1.5 1.5]);
+title('随机载频序列1');
+
 for k=1:63
     c=fh_seq2(k);
     switch(c)
@@ -216,14 +245,29 @@ for k=1:63
             help_despread_signal4=[help_despread_signal4 s8];
     end
 end
+
+figure(7);
+plot(spread_signal2);
+axis([-100 3100  -1.5 1.5]);
+title('随机载频序列2');
+figure(8);
+plot(spread_signal3);
+axis([-100 3100  -1.5 1.5]);
+title('随机载频序列3');
+figure(9);
+plot(spread_signal4);
+axis([-100 3100  -1.5 1.5]);
+title('随机载频序列4');
+
 %spreading BPSK Signal into wider band with total of 8 frequencies
 freq_hopped_sig1=signal1.*spread_signal1;
 freq_hopped_sig2=signal2.*spread_signal2;
 freq_hopped_sig3=signal3.*spread_signal3;
 freq_hopped_sig4=signal4.*spread_signal4;
-subplot(4,1,2);
+
+figure(10);
 plot(freq_hopped_sig1);
-axis([-100 3100 -1.5 1.5]);
+axis([-100 1000 -1.5 1.5]);
 title('\bf\it 扩频调制信号');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %进入信道 加上多用户干扰
@@ -236,23 +280,23 @@ dis_sig3=[];
 dis_sig4=[];
 for k=1:63
     if flag2(k)==0
-        flag2(k)==1;
+        flag2(k)=1;
     else
-        flag2(k)==0;
+        flag2(k)=0;
     end
 end
 for k=1:63
     if flag3(k)==0
-        flag3(k)==1;
+        flag3(k)=1;
     else
-        flag3(k)==0;
+        flag3(k)=0;
     end
 end
 for k=1:63
     if flag4(k)==0
-        flag4(k)==1;
+        flag4(k)=1;
     else
-        flag4(k)==0;
+        flag4(k)=0;
     end
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -287,28 +331,41 @@ dis_signal3=dis_sig3.*freq_hopped_sig3;
 dis_signal4=dis_sig4.*freq_hopped_sig4;
 A_dis_signal2=dis_sig2.*signal2;
 A_dis_signal3=dis_sig3.*signal3;
-A_dis_signal4=dis_sig4.*signal4;
+A_dis_signal4=dis_sig4.*signal3;
 A_all_dis_signal=A_dis_signal2+A_dis_signal3+A_dis_signal4;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%接受到多用户干扰和高斯噪声的信号
+%接收到多用户干扰和高斯噪声的信号
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-mix_sig=freq_hopped_sig2+dis_signal2+dis_signal3+dis_signal4;
+mix_sig=freq_hopped_sig1+dis_signal2+dis_signal3+dis_signal4;
+
+figure(11);
+plot(mix_sig);
+axis([-100 3100  -1.5 1.5]);
+title('加干扰');
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 %加高斯白噪声
 %%%%%%%%%%%%%%%%%%%%
 awgn_signal=awgn(mix_sig,SNR,1/2);
-subplot(4,1,3)
+
+figure(12);
 plot(awgn_signal);
 axis([-100 3100 -1.5 1.5]);
-title('\bf\it 加入多径干燥和白噪声的信号');
+title(' 加入多用户干扰和白噪声的信号');
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %解调，相干解调
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 de_spread_signal=spread_signal1;
 recieve_signal=awgn_signal.*de_spread_signal;
 A_high_fs=A_all_dis_signal+signal1;
-hf_signal=1/2*A_high_fs.*(spread_signal1.^2-help_despread_signal1.*2);
+hf_signal=1/2*A_high_fs.*(spread_signal1.^2-help_despread_signal1.^2);
 signal_out=recieve_signal-hf_signal;
+
+figure(13);
+plot(signal_out);
+axis([-100 3100 -1.5 1.5]);
+title('解调后');
 %%%%%%%%%%%%%%%%%%
 %抽样判决
 %%%%%%%%%%%%%%%%
@@ -330,10 +387,11 @@ for k=1:63
     end
     sentenced_signal_wave=[sentenced_signal_wave sig];
 end
-subplot(4,1,4)
+
+figure(14);
 plot(sentenced_signal_wave);
 axis([-100 3100 -1.5 1.5]);
-title('\bf\it 判决恢复后信号');
+title(' 判决恢复后信号');
 [Num,Ratio]=biterr(sentenced_signal,sig1);	%输出的信噪比和误码率
 erro_arry(number1)=Ratio;
 number1=number1+1;
@@ -341,7 +399,8 @@ number1=number1+1;
 erro_arry1=erro_arry1+erro_arry;
 end
 erro_arry1=erro_arry1/10;
-figure;	%输出信噪比误码率图形
+
+figure(15);	%输出信噪比误码率图形
 plot(SNR_arry,erro_arry1);
 title('误码率');
 xlabel('信噪比'),ylabel('误码率');
